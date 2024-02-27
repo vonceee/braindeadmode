@@ -29,11 +29,15 @@ public class CreatePostActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create an Intent to pass the post data back to the profile activity
-                Intent resultIntent = new Intent();
-                resultIntent.putExtra("postTitle", postTitle.getText().toString());
-                resultIntent.putExtra("postContent", postContent.getText().toString());
-                setResult(RESULT_OK, resultIntent);
+                String title = postTitle.getText().toString();
+                String content = postContent.getText().toString();
+
+                Intent intent = new Intent();
+                intent.putExtra("postTitle", title);
+                intent.putExtra("postContent", content);
+                setResult(RESULT_OK, intent);
                 finish();
+
             }
         });
     }

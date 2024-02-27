@@ -42,4 +42,8 @@
             super.onDestroyView();
             binding = null;
         }
+
+        public void updateData(String title, String content) {
+            // Use the received data as needed
+        }
     }
